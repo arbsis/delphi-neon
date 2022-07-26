@@ -4,6 +4,6 @@
 	"version": "1.6.1",
 	"homepage": "https://github.com/paolo-rossi/delphi-neon",
 	"mainsrc": "Source",
-	"projects": ["Neon.dproj"],
+	"projects": [],
 	"dependencies": {}
 }
