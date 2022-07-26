@@ -78,7 +78,6 @@
         <DCC_F>false</DCC_F>
         <DllSuffix>280</DllSuffix>
         <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=;CFBundleName=</VerInfo_Keys>
-        <DCC_OutputNeverBuildDcps>true</DCC_OutputNeverBuildDcps>
         <DCC_E>false</DCC_E>
         <DCC_ImageBase>00400000</DCC_ImageBase>
         <GenPackage>true</GenPackage>
@@ -176,7 +175,38 @@
                 <Source>
                     <Source Name="MainSource">Neon.dpk</Source>
                 </Source>
-                <Excluded_Packages/>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Anderson\Documents\Embarcadero\Studio\22.0\CatalogRepository\Skia4Delphi-3.4.0\Library\RAD Studio 11 Alexandria\Win32\Release\Bpl\Skia.Package.FMX280.bpl">Skia4Delphi FMX package</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Anderson\Documents\Embarcadero\Studio\22.0\CatalogRepository\Skia4Delphi-3.4.0\Library\RAD Studio 11 Alexandria\Win32\Release\Bpl\Skia.Package.VCL280.bpl">Skia4Delphi VCL package</Excluded_Packages>
+                    <Excluded_Packages Name="D:\Desenvolvimento\PacotesTerceiros\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_Comum.bpl">ACBr - (design-time) Biblioteca Comum, EAD, AAC  - (http://www.projetoacbr.com.br/)</Excluded_Packages>
+                    <Excluded_Packages Name="D:\Desenvolvimento\PacotesTerceiros\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_DFeComum.bpl">ACBr - (design-time) Biblioteca com Métodos e Classes em comum a todos Documentos Fiscais Eletrônicos</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\madCollection\madBasic\BDS22\win32\madBasic_.bpl">madBasic 1.2.7  -  www.madshi.net</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\madCollection\madDisAsm\BDS22\win32\madDisAsm_.bpl">madDisAsm 2.2.6  -  www.madshi.net</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\madCollection\madExcept\BDS22\win32\madExcept_.bpl">madExcept 5.1.2  -  www.madshi.net</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclFMXtee9280.bpl">TeeChart Lite FMX Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcltee9280.bpl">TeeChart Standard VCL Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Anderson\Documents\Embarcadero\Studio\22.0\CatalogRepository\Skia4Delphi-3.4.0\Library\RAD Studio 11 Alexandria\Win32\Release\Bpl\Skia.Package.FMX.Designtime280.bpl">Skia4Delphi FMX Designtime package</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Anderson\Documents\Embarcadero\Studio\22.0\CatalogRepository\Skia4Delphi-3.4.0\Library\RAD Studio 11 Alexandria\Win32\Release\Bpl\Skia.Package.VCL.Designtime280.bpl">Skia4Delphi VCL Designtime package</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\22.0\bpl\AWSSDK280.bpl">Appercept AWS SDK for Delphi</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Raize\CS5\Bin\CodeSiteExpressPkg_Design280.bpl">CodeSite Express 5.4.0</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclipworks20.bpl">/n software inc. - IPWorks 2020 - www.nsoftware.com</Excluded_Packages>
+                    <Excluded_Packages Name="D:\Desenvolvimento\PacotesTerceiros\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_OpenSSL.bpl">ACBr - (design-time) Bind para OpenSSL 1.1.1 - (http://www.projetoacbr.com.br/)</Excluded_Packages>
+                    <Excluded_Packages Name="D:\Desenvolvimento\PacotesTerceiros\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_Diversos.bpl">ACBr - (design-time) Calculadora, Extenso, Validador, Troco, CMC7, Fala, BarCode, EnterTab, GIF, QrCode, InStore, CargaBal - (http://www.projetoacbr.com.br/)</Excluded_Packages>
+                    <Excluded_Packages Name="D:\Desenvolvimento\PacotesTerceiros\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_Serial.bpl">ACBr - (design-time) ECF, Balanças, Cheques, Displays, Etiquetas, Gavetas, Terminais, SMS, RFD, Leitores - (http://www.projetoacbr.com.br/)</Excluded_Packages>
+                    <Excluded_Packages Name="D:\Desenvolvimento\PacotesTerceiros\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_SPED.bpl">ACBr - (design-time) EFD ICMS/IPI, EFD Contribuições, EFD Contábil - (http://www.projetoacbr.com.br/)</Excluded_Packages>
+                    <Excluded_Packages Name="D:\Desenvolvimento\PacotesTerceiros\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_TCP.bpl">ACBr - (design-time) Socket, CEP, TCP, IBGE, CNIEE, Suframa, Download, FTP, HTTP, NFPws, IBPTax, CNPJ, CPF, Cotação, E-mail, Feriado - (http://www.projectoacbr.com.br/)</Excluded_Packages>
+                    <Excluded_Packages Name="D:\Desenvolvimento\PacotesTerceiros\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_MTER.bpl">ACBr - (design-time) MTER Componente Servidor de Micro Terminais TCP/IP - (http://www.projectoacbr.com.br/)</Excluded_Packages>
+                    <Excluded_Packages Name="D:\Desenvolvimento\PacotesTerceiros\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_Integrador.bpl">ACBr - (design-time) Integrador - (http://www.projetoacbr.com.br/)</Excluded_Packages>
+                    <Excluded_Packages Name="D:\Desenvolvimento\PacotesTerceiros\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_NFe.bpl">ACBr - (design-time) Nota Fiscal Eletrônica - (http://www.projetoacbr.com.br/)</Excluded_Packages>
+                    <Excluded_Packages Name="D:\Desenvolvimento\PacotesTerceiros\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_NFeDanfeESCPOS.bpl">ACBr - (design-time) DANFe para NFC-e Impressora Serial - (http://www.projetoacbr.com.br/)</Excluded_Packages>
+                    <Excluded_Packages Name="D:\Desenvolvimento\PacotesTerceiros\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_TEFD.bpl">ACBr - (design-time) Transferência Eletrônica de Fundos - (http://www.projetoacbr.com.br/)</Excluded_Packages>
+                    <Excluded_Packages Name="D:\Desenvolvimento\PacotesTerceiros\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_PIXCD.bpl">(design-time) ACBrPIXCD - Package para componentes relacionados a PIX e Carteira Digitais</Excluded_Packages>
+                    <Excluded_Packages Name="D:\Desenvolvimento\PacotesTerceiros\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_OFX.bpl">ACBr - (design-time) - OFX - Open Financial Exchange - - (http://www.projetoacbr.com.br/)</Excluded_Packages>
+                    <Excluded_Packages Name="D:\Desenvolvimento\PacotesTerceiros\ACBr\Lib\Delphi\LibD28\Win32\DCLACBr_NFeDanfeRL.bpl">ACBr - (design-time) DANFe em Fortes Report - (http://www.projetoacbr.com.br/)</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\madCollection\madBasic\BDS22\win32\madHelp_.bpl">madHelp 1.1.1  -  www.madshi.net</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\madCollection\madExcept\BDS22\win32\madExceptVcl_.bpl">madExceptVcl 2.1.0  -  www.madshi.net</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\madCollection\madExcept\BDS22\win32\madExceptWizard_.bpl">madExceptWizard 3.1.8  -  www.madshi.net</Excluded_Packages>
+                </Excluded_Packages>
             </Delphi.Personality>
             <Platforms>
                 <Platform value="Android">False</Platform>

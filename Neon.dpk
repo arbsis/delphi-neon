@@ -49,7 +49,7 @@ package Neon;
 {$DESCRIPTION 'Neon Serialization Library'}
 {$LIBSUFFIX '280'}
 {$RUNONLY}
-{$IMPLICITBUILD OFF}
+{$IMPLICITBUILD ON}
 
 requires
   rtl,
