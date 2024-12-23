@@ -36,7 +36,7 @@ type
   Nullable<T> = record
   private
     FValue: T;
-    FHasValue: string;
+    FHasValue: Boolean;
     procedure Clear;
     function GetValueType: PTypeInfo;
     function GetValue: T;
@@ -49,6 +49,8 @@ type
     function Equals(const Value: T): Boolean; overload;
     function GetValueOrDefault: T; overload;
     function GetValueOrDefault(const Default: T): T; overload;
+    function ToString: String;
+    function ToVariant: Variant;
 
     property HasValue: Boolean read GetHasValue;
     function IsNull: Boolean;
@@ -89,7 +91,7 @@ uses
 constructor Nullable<T>.Create(const Value: T);
 begin
   FValue := Value;
-  FHasValue := DefaultTrueBoolStr;
+  FHasValue := True;
 end;
 
 constructor Nullable<T>.Create(const Value: Variant);
@@ -103,7 +105,7 @@ end;
 procedure Nullable<T>.Clear;
 begin
   FValue := Default(T);
-  FHasValue := '';
+  FHasValue := False;
 end;
 
 class operator Nullable<T>.Equal(const Left: Nullable<T>; Right: T): Boolean;
@@ -131,7 +133,7 @@ end;
 
 function Nullable<T>.GetHasValue: Boolean;
 begin
-  Result := FHasValue <> '';
+  Result := FHasValue;
 end;
 
 function Nullable<T>.GetValueType: PTypeInfo;
@@ -197,7 +199,7 @@ end;
 
 function Nullable<T>.IsNull: Boolean;
 begin
-  Result := FHasValue = '';
+  Result := not FHasValue;
 end;
 
 class operator Nullable<T>.LessThan(const Left: Nullable<T>; Right: T): Boolean;
@@ -228,12 +230,42 @@ end;
 procedure Nullable<T>.SetValue(const AValue: T);
 begin
   FValue := AValue;
-  FHasValue := DefaultTrueBoolStr;
+  FHasValue := True;
 end;
 
 class operator Nullable<T>.Implicit(const Value: TValue): Nullable<T>;
 begin
   Result := Nullable<T>.Create(Value.AsType<T>);
 end;
+
+function Nullable<T>.ToString: String;
+var
+  LValue: TValue;
+begin
+  if HasValue then
+  begin
+    LValue := TValue.From<T>(FValue);
+    Result := LValue.ToString;
+  end
+  else
+    Result := 'Null';
+end;
+
+function Nullable<T>.ToVariant: Variant;
+var
+  LValue: TValue;
+begin
+  if HasValue then
+  begin
+    LValue := TValue.From<T>(FValue);
+    if LValue.IsType<Boolean> then
+      Result := LValue.AsBoolean
+    else
+      Result := LValue.AsVariant;
+  end
+  else
+    Result := Null;
+end;
+
 
 end.
