@@ -1,27 +1,4 @@
-{******************************************************************************}
-{                                                                              }
-{  Neon: Serialization Library for Delphi                                      }
-{  Copyright (c) 2018 Paolo Rossi                                              }
-{  https://github.com/paolo-rossi/neon-library                                 }
-{                                                                              }
-{******************************************************************************}
-{                                                                              }
-{  Licensed under the Apache License, Version 2.0 (the "License");             }
-{  you may not use this file except in compliance with the License.            }
-{  You may obtain a copy of the License at                                     }
-{                                                                              }
-{      http://www.apache.org/licenses/LICENSE-2.0                              }
-{                                                                              }
-{  Unless required by applicable law or agreed to in writing, software         }
-{  distributed under the License is distributed on an "AS IS" BASIS,           }
-{  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.    }
-{  See the License for the specific language governing permissions and         }
-{  limitations under the License.                                              }
-{                                                                              }
-{******************************************************************************}
 unit Neon.Core.Nullables;
-
-{$I Neon.inc}
 
 interface
 
@@ -42,6 +19,7 @@ type
     function GetValue: T;
     procedure SetValue(const AValue: T);
     function GetHasValue: Boolean;
+    class function VarIsNullOrEmpty(const Value: Variant): Boolean; static;
   public
     constructor Create(const Value: T); overload;
     constructor Create(const Value: Variant); overload;
@@ -71,6 +49,7 @@ type
     class operator NotEqual(const Left: T; Right: Nullable<T>): Boolean; overload;
     class operator GreaterThan(const Left: Nullable<T>; Right: T): Boolean; overload;
     class operator LessThan(const Left: Nullable<T>; Right: T): Boolean; overload;
+
   end;
 
   NullString = Nullable<string>;
@@ -78,13 +57,15 @@ type
   NullInteger = Nullable<Integer>;
   NullInt64 = Nullable<Int64>;
   NullDouble = Nullable<Double>;
-  NullDateTime = Nullable<TDateTime>;
   NullCurrency = Nullable<Currency>;
+  NullDate = Nullable<TDate>;
+  NullTime = Nullable<TTime>;
+  NullDateTime = Nullable<TDateTime>;
 
 implementation
 
-uses
-  Neon.Core.Utils;
+const
+  CHasValueFlag = '@';
 
 { Nullable<T> }
 
@@ -267,5 +248,10 @@ begin
     Result := Null;
 end;
 
+
+class function Nullable<T>.VarIsNullOrEmpty(const Value: Variant): Boolean;
+begin
+  Result := VarIsNull(Value) or VarIsEmpty(Value);
+end;
 
 end.
