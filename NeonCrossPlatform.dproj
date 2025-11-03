@@ -103,7 +103,6 @@
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
-        <DCC_DcuOutput>..\..\Lib\$(Platform)\$(Config)</DCC_DcuOutput>
         <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
         <DCC_E>false</DCC_E>
         <DCC_N>false</DCC_N>
@@ -116,9 +115,8 @@
         <DCC_CBuilderOutput>All</DCC_CBuilderOutput>
         <RuntimeOnlyPackage>true</RuntimeOnlyPackage>
         <DCC_Description>Neon Serialization Library</DCC_Description>
-        <DCC_UnitSearchPath>..\..\Source;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_UnitSearchPath>Source;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <SanitizedProjectName>NeonCrossPlatform</SanitizedProjectName>
-        <DCC_BplOutput>..\..\Lib\$(Platform)\$(Config)</DCC_BplOutput>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Android)'!=''">
         <VerInfo_Keys>package=com.embarcadero.$(MSBuildProjectName);label=$(MSBuildProjectName);versionCode=1;versionName=1.0.0;persistent=False;restoreAnyVersion=False;installLocation=auto;largeHeap=False;theme=TitleBar;hardwareAccelerated=true;apiKey=;minSdkVersion=23;targetSdkVersion=35</VerInfo_Keys>
@@ -206,17 +204,17 @@
         </DelphiCompile>
         <DCCReference Include="rtl.dcp"/>
         <DCCReference Include="dbrtl.dcp"/>
-        <DCCReference Include="..\..\Source\Neon.Core.Attributes.pas"/>
-        <DCCReference Include="..\..\Source\Neon.Core.DynamicTypes.pas"/>
-        <DCCReference Include="..\..\Source\Neon.Core.Nullables.pas"/>
-        <DCCReference Include="..\..\Source\Neon.Core.Persistence.JSON.pas"/>
-        <DCCReference Include="..\..\Source\Neon.Core.Persistence.pas"/>
-        <DCCReference Include="..\..\Source\Neon.Core.Serializers.RTL.pas"/>
-        <DCCReference Include="..\..\Source\Neon.Core.Serializers.DB.pas"/>
-        <DCCReference Include="..\..\Source\Neon.Core.TypeInfo.pas"/>
-        <DCCReference Include="..\..\Source\Neon.Core.Types.pas"/>
-        <DCCReference Include="..\..\Source\Neon.Core.Utils.pas"/>
-        <DCCReference Include="..\..\Source\Neon.Core.Persistence.JSON.Schema.pas"/>
+        <DCCReference Include="Source\Neon.Core.Attributes.pas"/>
+        <DCCReference Include="Source\Neon.Core.DynamicTypes.pas"/>
+        <DCCReference Include="Source\Neon.Core.Nullables.pas"/>
+        <DCCReference Include="Source\Neon.Core.Persistence.JSON.pas"/>
+        <DCCReference Include="Source\Neon.Core.Persistence.pas"/>
+        <DCCReference Include="Source\Neon.Core.Serializers.RTL.pas"/>
+        <DCCReference Include="Source\Neon.Core.Serializers.DB.pas"/>
+        <DCCReference Include="Source\Neon.Core.TypeInfo.pas"/>
+        <DCCReference Include="Source\Neon.Core.Types.pas"/>
+        <DCCReference Include="Source\Neon.Core.Utils.pas"/>
+        <DCCReference Include="Source\Neon.Core.Persistence.JSON.Schema.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

@@ -5,7 +5,7 @@
 	"homepage": "https://github.com/paolo-rossi/delphi-neon",
 	"mainsrc": "./Source/",
 	"projects": [
-		"Neon.dproj"
+		"NeonCrossPlatform.dproj"
 	],
 	"dependencies": {}
 }

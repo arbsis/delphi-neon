@@ -19,7 +19,7 @@
 {  limitations under the License.                                              }
 {                                                                              }
 {******************************************************************************}
-package Neon;
+package NeonCrossPlatform;
 
 {$R *.res}
 {$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
@@ -30,44 +30,41 @@ package Neon;
 {$EXTENDEDSYNTAX ON}
 {$IMPORTEDDATA ON}
 {$IOCHECKS ON}
-{$LOCALSYMBOLS OFF}
+{$LOCALSYMBOLS ON}
 {$LONGSTRINGS ON}
 {$OPENSTRINGS ON}
-{$OPTIMIZATION ON}
+{$OPTIMIZATION OFF}
 {$OVERFLOWCHECKS OFF}
 {$RANGECHECKS OFF}
-{$REFERENCEINFO OFF}
+{$REFERENCEINFO ON}
 {$SAFEDIVIDE OFF}
-{$STACKFRAMES OFF}
+{$STACKFRAMES ON}
 {$TYPEDADDRESS OFF}
 {$VARSTRINGCHECKS ON}
 {$WRITEABLECONST OFF}
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
-{$DEFINE RELEASE}
+{$DEFINE DEBUG}
 {$ENDIF IMPLICITBUILDING}
 {$DESCRIPTION 'Neon Serialization Library'}
-{$LIBSUFFIX '280'}
 {$RUNONLY}
-{$IMPLICITBUILD OFF}
+{$IMPLICITBUILD ON}
 
 requires
   rtl,
   dbrtl;
 
 contains
-  Neon.Core.Attributes in 'Source\Neon.Core.Attributes.pas',
-  Neon.Core.DynamicTypes in 'Source\Neon.Core.DynamicTypes.pas',
-  Neon.Core.Nullables in 'Source\Neon.Core.Nullables.pas',
-  Neon.Core.Persistence in 'Source\Neon.Core.Persistence.pas',
-  Neon.Core.Persistence.JSON in 'Source\Neon.Core.Persistence.JSON.pas',
-  Neon.Core.Persistence.JSON.Schema in 'Source\Neon.Core.Persistence.JSON.Schema.pas',
-  Neon.Core.Serializers.RTL in 'Source\Neon.Core.Serializers.RTL.pas',
-  Neon.Core.Serializers.DB in 'Source\Neon.Core.Serializers.DB.pas',
-  Neon.Core.Serializers.Nullables in 'Source\Neon.Core.Serializers.Nullables.pas',
-  Neon.Core.TypeInfo in 'Source\Neon.Core.TypeInfo.pas',
-  Neon.Core.Types in 'Source\Neon.Core.Types.pas',
-  Neon.Core.Utils in 'Source\Neon.Core.Utils.pas';
+  Neon.Core.Attributes in '..\..\Source\Neon.Core.Attributes.pas',
+  Neon.Core.DynamicTypes in '..\..\Source\Neon.Core.DynamicTypes.pas',
+  Neon.Core.Nullables in '..\..\Source\Neon.Core.Nullables.pas',
+  Neon.Core.Persistence.JSON in '..\..\Source\Neon.Core.Persistence.JSON.pas',
+  Neon.Core.Persistence in '..\..\Source\Neon.Core.Persistence.pas',
+  Neon.Core.Serializers.RTL in '..\..\Source\Neon.Core.Serializers.RTL.pas',
+  Neon.Core.Serializers.DB in '..\..\Source\Neon.Core.Serializers.DB.pas',
+  Neon.Core.TypeInfo in '..\..\Source\Neon.Core.TypeInfo.pas',
+  Neon.Core.Types in '..\..\Source\Neon.Core.Types.pas',
+  Neon.Core.Utils in '..\..\Source\Neon.Core.Utils.pas',
+  Neon.Core.Persistence.JSON.Schema in '..\..\Source\Neon.Core.Persistence.JSON.Schema.pas';
 
 end.
-
